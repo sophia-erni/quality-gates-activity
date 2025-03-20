@@ -6,10 +6,6 @@
 export class HomePage {
   url = '/home';
 
-  navigateTo() {
-    cy.visit(this.url);
-  }
-
   get welcomeText() {
     return cy.get('app-root mat-card-title');
   }
