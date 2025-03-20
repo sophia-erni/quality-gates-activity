@@ -9,12 +9,13 @@ describe('when the app loads', () => {
 
   before(() => {
     app.navigateAndSetLanguage();
+    login.navigateTo();
+    login.login('username', 'password'); // Replace with valid credentials
     homePage.navigateTo();
   });
 
   it('should display the login page and log in', () => {
     cy.url().should('include', login.url);
-    login.login();
   });
 
   it('should display the home page and say hello', () => {
