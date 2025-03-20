@@ -83,15 +83,6 @@ jobs:
       - name: Run E2E tests
         run: npm run e2e
 
-      - name: Generate E2E test report
-        run: npm run e2e:report
-
-      - name: Upload E2E test report
-        uses: actions/upload-artifact@v4
-        with:
-          name: e2e-test-report
-          path: path/to/e2e/report
-
   build:
     runs-on: ubuntu-latest
     steps:
