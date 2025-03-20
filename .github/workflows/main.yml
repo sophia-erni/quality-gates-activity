@@ -81,7 +81,7 @@ jobs:
         run: zip -r build.zip dist/
 
       - name: Upload build artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: build-artifact_Sophia
           path: build.zip
