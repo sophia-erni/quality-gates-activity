@@ -1,3 +1,4 @@
+// filepath: c:\Users\extjaso\OneDrive - ERNI Group\Desktop\Bootcamp\Exercises\quality-gates-activity\cypress\e2e\page-objects\home.po.ts
 export class HomePage {
   url = '/home';
 
@@ -7,6 +8,6 @@ export class HomePage {
   }
 
   get welcomeText() {
-    return cy.get('app-root mat-card-title', { timeout: 10000 }).should('be.visible'); // Increase the timeout to 10 seconds
+    return cy.get('mat-card mat-card-title', { timeout: 10000 }).should('be.visible'); // Increase the timeout to 10 seconds
   }
 }
