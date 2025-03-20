@@ -18,6 +18,6 @@ describe('when the app loads', () => {
 
   it('should display the home page and say hello', () => {
     cy.url().should('include', homePage.url, { timeout: 10000 }); // Increase the timeout to 10 seconds
-    homePage.welcomeText.should('contain', 'Welcome');
+    homePage.welcomeText.should('contain', 'hello');
   });
 });
