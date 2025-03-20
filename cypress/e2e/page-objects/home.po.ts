@@ -3,6 +3,7 @@ export class HomePage {
 
   navigateTo() {
     cy.visit(this.url);
+    cy.url().should('include', this.url, { timeout: 10000 }); // Ensure the URL includes '/home'
   }
 
   get welcomeText() {
