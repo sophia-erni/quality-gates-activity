@@ -1,0 +1,32 @@
+{
+  "generator-ngx-rocket": {
+    "version": "11.0.0",
+    "props": {
+      "location": "path",
+      "strict": true,
+      "skipInstall": false,
+      "skipQuickstart": false,
+      "initGit": true,
+      "usePrefix": true,
+      "appName": "quality gates activity",
+      "target": ["web"],
+      "ui": "material",
+      "layout": "simple",
+      "features": ["auth"],
+      "languages": ["en-US"],
+      "tools": ["prettier"],
+      "utility": ["lodash"],
+      "deploy": "github",
+      "projectName": "quality-gates-activity",
+      "packageManager": "npm",
+      "mobile": [],
+      "desktop": [],
+      "pwa": false,
+      "auth": true,
+      "lazy": false,
+      "e2e": false,
+      "cypress": false,
+      "angulartics": false
+    }
+  }
+}
