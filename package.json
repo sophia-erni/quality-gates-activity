@@ -16,9 +16,8 @@
     "prettier:check": "prettier --list-different \"./src/**/*.{ts,js,html,scss}\"",
     "postinstall": "npm run prettier -s && husky install",
     "generate": "ng generate",
-    "e2e": "ng e2e",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "e2e": "cypress run",
+    "e2e:report": "generate-e2e-report-command"
   },
   "dependencies": {
     "@angular/animations": "~14.1.3",

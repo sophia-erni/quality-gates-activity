@@ -43,7 +43,7 @@ jobs:
       - name: Run Prettier check
         run: npm run prettier:check
 
-  test:
+  unit-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -76,6 +76,15 @@ jobs:
 
       - name: Run E2E tests
         run: npm run e2e
+
+      - name: Generate E2E test report
+        run: npm run e2e:report
+
+      - name: Upload E2E test report
+        uses: actions/upload-artifact@v3
+        with:
+          name: e2e-test-report
+          path: path/to/e2e/report
 
   build:
     runs-on: ubuntu-latest
