@@ -16,8 +16,9 @@
     "prettier:check": "prettier --list-different \"./src/**/*.{ts,js,html,scss}\"",
     "postinstall": "npm run prettier -s && husky install",
     "generate": "ng generate",
-    "e2e": "start-server-and-test start http://localhost:4200 cypress:run",
-    "cypress:run": "cypress run",
+    "e2e": "npm run write:env -s && ng e2e",
+    "cypress:open": "npm run write:env -s && ng run login:cypress-open",
+    "cypress:run": "npm run write:env -s && ng run login:cypress-run",
     "e2e:report": "generate-e2e-report-command"
   },
   "dependencies": {
