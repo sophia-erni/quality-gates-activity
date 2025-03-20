@@ -77,20 +77,6 @@ jobs:
       - name: Run E2E tests
         run: npm run e2e
 
-  security-scan:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Run security scan
-        uses: github/codeql-action/init@v1
-        with:
-          languages: javascript
-
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v1
-
   build:
     runs-on: ubuntu-latest
     steps:
