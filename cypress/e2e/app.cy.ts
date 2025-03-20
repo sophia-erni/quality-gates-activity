@@ -9,6 +9,7 @@ describe('when the app loads', () => {
 
   before(() => {
     app.navigateAndSetLanguage();
+    homePage.navigateTo();
   });
 
   it('should display the login page and log in', () => {

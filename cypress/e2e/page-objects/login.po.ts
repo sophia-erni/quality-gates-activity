@@ -6,6 +6,9 @@
 export class LoginPage {
   url = '/login';
 
+  navigateTo() {
+    cy.visit(this.url);
+  }
   get usernameField() {
     return cy.get('[formControlName="username"]');
   }
