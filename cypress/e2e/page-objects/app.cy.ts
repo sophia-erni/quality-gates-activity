@@ -1,6 +1,6 @@
-import { LoginPage } from './page-objects/login.po';
-import { AppSharedPage } from './page-objects/app-shared.po';
-import { HomePage } from './page-objects/home.po';
+import { LoginPage } from './login.po';
+import { AppSharedPage } from './app-shared.po';
+import { HomePage } from './home.po';
 
 describe('when the app loads', () => {
   const login = new LoginPage();
