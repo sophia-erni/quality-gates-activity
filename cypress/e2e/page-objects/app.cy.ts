@@ -1,6 +1,6 @@
-import { LoginPage } from './e2e/page-objects/login.po';
-import { AppSharedPage } from './e2e/page-objects/app-shared.po';
-import { HomePage } from './e2e/page-objects/home.po';
+import { LoginPage } from './login.po';
+import { AppSharedPage } from './app-shared.po';
+import { HomePage } from './home.po';
 
 describe('when the app loads', () => {
   const login = new LoginPage();

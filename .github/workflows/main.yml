@@ -74,6 +74,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Start server
+        run: npm start -- --port 4300 &
+
+      - name: Wait for server to be ready
+        run: npx wait-on http://localhost:4300
+
       - name: Run E2E tests
         run: npm run e2e
 
