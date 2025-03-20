@@ -16,7 +16,8 @@
     "prettier:check": "prettier --list-different \"./src/**/*.{ts,js,html,scss}\"",
     "postinstall": "npm run prettier -s && husky install",
     "generate": "ng generate",
-    "e2e": "cypress run",
+    "e2e": "start-server-and-test start http://localhost:4200 cypress:run",
+    "cypress:run": "cypress run",
     "e2e:report": "generate-e2e-report-command"
   },
   "dependencies": {
@@ -83,7 +84,8 @@
     "stylelint-config-standard": "~28.0.0",
     "ts-node": "^10.1.0",
     "typescript": "4.7.4",
-    "cypress": "latest"
+    "cypress": "latest",
+    "start-server-and-test": "^1.12.0"
   },
   "prettier": {
     "singleQuote": true,
