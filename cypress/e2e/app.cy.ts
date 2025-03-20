@@ -15,4 +15,9 @@ describe('when the app loads', () => {
     cy.url().should('include', login.url);
     login.login();
   });
+
+  it('should display the home page and say hello', () => {
+    cy.url().should('include', home.url);
+    home.welcomeText.contains('Hello world !');
+  });
 });
