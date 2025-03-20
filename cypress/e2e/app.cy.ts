@@ -10,7 +10,8 @@ describe('when the app loads', () => {
   before(() => {
     app.navigateAndSetLanguage();
     login.navigateTo();
-    login.login('username', 'password'); // Replace with valid credentials
+    login.login('test', '123'); // Replace with valid credentials
+    cy.url().should('not.include', login.url); // Verify that the login was successful
     homePage.navigateTo();
   });
 
