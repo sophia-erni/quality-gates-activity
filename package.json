@@ -56,6 +56,7 @@
     "@biesbjerg/ngx-translate-extract-marker": "^1.0.0",
     "@ngneat/until-destroy": "^9.0.0",
     "@ngx-rocket/scripts": "^5.2.2",
+    "@types/cypress": "^0.1.6",
     "@types/jasmine": "^4.0.0",
     "@types/jasminewd2": "^2.0.8",
     "@types/lodash": "^4.14.184",
