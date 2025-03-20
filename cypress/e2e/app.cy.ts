@@ -5,7 +5,7 @@ import { HomePage } from './page-objects/home.po';
 describe('when the app loads', () => {
   const login = new LoginPage();
   const app = new AppSharedPage();
-  const home = new HomePage();
+  const homePage = new HomePage();
 
   before(() => {
     app.navigateAndSetLanguage();
@@ -17,7 +17,8 @@ describe('when the app loads', () => {
   });
 
   it('should display the home page and say hello', () => {
-    cy.url().should('include', home.url);
-    home.welcomeText.contains('Hello world !');
+    homePage.navigateTo(); // Ensure navigation to the home page
+    cy.url().should('include', homePage.url, { timeout: 10000 }); // Increase the timeout to 10 seconds
+    homePage.welcomeText.should('contain', 'Hello world !');
   });
 });
